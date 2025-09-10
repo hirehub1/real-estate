@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work Opportunities Enrollment (Russia)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html,body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
+    .card{ @apply rounded-2xl shadow-lg bg-white; }
+    .btn{ @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 font-semibold shadow; }
+    .btn-primary{ @apply bg-indigo-600 text-white hover:bg-indigo-700; }
+    .btn-ghost{ @apply bg-white text-gray-700 hover:bg-gray-50 ring-1 ring-gray-200; }
+    .input{ @apply w-full rounded-xl border border-gray-200 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500; }
+    .label{ @apply block text-sm font-medium text-gray-700 mb-1; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-30 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-indigo-600 text-white grid place-content-center font-bold">RU</div>
+        <div>
+          <h1 class="text-xl font-extrabold">Work Opportunities</h1>
+          <p class="text-xs text-gray-500 -mt-0.5">Location: Russia</p>
+        </div>
+      </div>
+      <nav class="hidden sm:flex items-center gap-3">
+        <a href="#work" class="btn btn-ghost">Apply</a>
+        <a href="#faqs" class="btn btn-ghost">FAQs</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Apply for <span class="text-indigo-600">Work Opportunities</span> in Russia</h2>
+        <p class="text-gray-600 mt-3">Current priority roles: <span class="font-semibold">Warehouse Management, Drivers, House Caretakers, Snow Cleaning</span>.</p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="#work" class="btn btn-primary">Apply Now</a>
+        </div>
+      </div>
+      <div class="card p-6">
+        <ul class="grid grid-cols-2 gap-3 text-sm">
+          <li class="p-4 rounded-xl bg-indigo-50">🇷🇺 Country: <b>Russia</b></li>
+          <li class="p-4 rounded-xl bg-indigo-50">🕒 Processing: <b>3–7 days</b> (example)</li>
+          <li class="p-4 rounded-xl bg-indigo-50">🔒 Data: <b>Encrypted in-browser</b></li>
+          <li class="p-4 rounded-xl bg-indigo-50">📄 Export: <b>Download JSON/CSV</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Form -->
+  <section class="max-w-6xl mx-auto px-4 pb-16" id="forms">
+    <div class="card p-6">
+      <form id="workForm" class="grid md:grid-cols-2 gap-4" novalidate>
+        <div class="md:col-span-2">
+          <h3 id="work" class="text-xl font-bold">Work Enrollment (Russia)</h3>
+          <p class="text-sm text-gray-600">Select a role and fill in your details. Priority roles are listed first.</p>
+        </div>
+
+        <div>
+          <label class="label">First Name</label>
+          <input class="input" name="firstName" required />
+        </div>
+        <div>
+          <label class="label">Last Name</label>
+          <input class="input" name="lastName" required />
+        </div>
+        <div>
+          <label class="label">Email</label>
+          <input class="input" type="email" name="email" required />
+        </div>
+        <div>
+          <label class="label">Phone</label>
+          <input class="input" type="tel" name="phone" placeholder="+7 900 000-00-00" required />
+        </div>
+        <div>
+          <label class="label">City (Russia)</label>
+          <select class="input" name="city" required>
+            <option value="">Select city</option>
+            <option>Moscow</option>
+            <option>Saint Petersburg</option>
+            <option>Novosibirsk</option>
+            <option>Yekaterinburg</option>
+            <option>Kazan</option>
+            <option>Nizhny Novgorod</option>
+            <option>Samara</option>
+            <option>Omsk</option>
+            <option>Rostov-on-Don</option>
+            <option>Ufa</option>
+          </select>
+        </div>
+        <div>
+          <label class="label">Job Type</label>
+          <select class="input" name="jobType" required>
+            <option value="">Select role</option>
+            <option>Warehouse Management</option>
+            <option>Driver</option>
+            <option>House Caretaker</option>
+            <option>Snow Cleaning</option>
+          </select>
+        </div>
+        <div>
+          <label class="label">Preferred Start Date</label>
+          <input class="input" type="date" name="startDate" />
+        </div>
+        <div>
+          <label class="label">Experience (Years)</label>
+          <input class="input" type="number" name="experienceYears" min="0" step="1" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="label">Short Cover Note</label>
+          <textarea class="input" name="note" rows="4" placeholder="Tell us briefly about your skills and availability..."></textarea>
+        </div>
+        <div class="md:col-span-2 flex items-start gap-3">
+          <input id="workConsent" type="checkbox" class="mt-1" required />
+          <label for="workConsent" class="text-sm text-gray-700">I consent to the processing of my application data for the purpose of job placement in Russia.</label>
+        </div>
+        <div class="md:col-span-2 flex gap-3">
+          <button class="btn btn-primary" type="submit">Submit Application</button>
+          <button class="btn btn-ghost" type="button" id="workDownloadJson" disabled>Download JSON</button>
+          <button class="btn btn-ghost" type="button" id="workDownloadCsv" disabled>Download CSV</button>
+        </div>
+        <p id="workSuccess" class="hidden md:col-span-2 text-green-700 bg-green-50 border border-green-200 rounded-xl p-3">✅ Application captured locally. You can download and email it to us.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="max-w-6xl mx-auto px-4 pb-24">
+    <h3 class="text-2xl font-bold mb-4">FAQs</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card p-5">
+        <h4 class="font-semibold">Is the country fixed to Russia?</h4>
+        <p class="text-gray-600 text-sm mt-1">Yes. The form includes only Russian cities and is intended for opportunities located in Russia.</p>
+      </div>
+      <div class="card p-5">
+        <h4 class="font-semibold">How are submissions saved?</h4>
+        <p class="text-gray-600 text-sm mt-1">For privacy, submissions are kept in your browser and can be downloaded as JSON/CSV to email or upload to your chosen system.</p>
+      </div>
+      <div class="card p-5">
+        <h4 class="font-semibold">Can I add more job roles?</h4>
+        <p class="text-gray-600 text-sm mt-1">Yes. Edit the <code>jobTypes</code> array in the script or the <code>&lt;select&gt;</code> options.</p>
+      </div>
+      <div class="card p-5">
+        <h4 class="font-semibold">How do I connect a backend?</h4>
+        <p class="text-gray-600 text-sm mt-1">You can connect services like Netlify Forms or Formspree, or post to your server API from the <code>handleSubmit()</code> function.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex flex-wrap items-center justify-between gap-3">
+      <p>© <span id="year"></span> RU Work Opportunities</p>
+      <p>Contact: <a href="mailto:hirehubrussia@gmail.com" class="text-indigo-700">hirehubrussia@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Util: CSV encode
+    function toCsv(obj){
+      const keys = Object.keys(obj);
+      const head = keys.join(",");
+      const row = keys.map(k => '"' + String(obj[k] ?? '').replaceAll('"','""') + '"').join(',');
+      return head + "\n" + row;
+    }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Submit handler (local capture + download buttons)
+    function handleSubmit(e){
+      e.preventDefault();
+      const form = e.target;
+      if(!form.reportValidity()) return;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.country = 'Russia';
+      data.kind = 'work';
+      data.timestamp = new Date().toISOString();
+
+      // Show success + enable downloads
+      const jsonStr = JSON.stringify(data, null, 2);
+      const csvStr = toCsv(data);
+
+      document.getElementById('workSuccess').classList.remove('hidden');
+      enableDownload('workDownloadJson', jsonStr, 'work-application.json', 'application/json');
+      enableDownload('workDownloadCsv', csvStr, 'work-application.csv', 'text/csv');
+    }
+
+    function enableDownload(btnId, content, filename, mime){
+      const btn = document.getElementById(btnId);
+      const blob = new Blob([content], {type: mime});
+      const url = URL.createObjectURL(blob);
+      btn.disabled = false;
+      btn.onclick = () => {
+        const a = document.createElement('a');
+        a.href = url; a.download = filename; a.click();
+        setTimeout(()=>URL.revokeObjectURL(url), 2000);
+      };
+    }
+
+    document.getElementById('workForm').addEventListener('submit', handleSubmit);
+  </script>
+</body>
+</html>
